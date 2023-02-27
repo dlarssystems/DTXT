@@ -1,7 +1,3 @@
-import os
-import platform
-import ctypes
-import subprocess
 import tkinter as tk
 from tkinter import ttk
 from tkinter import filedialog
