@@ -12,7 +12,7 @@ class GUI(tk.Tk):
         self.style = ttk.Style()
         self.style.configure("TFrame", background="#3d3d3d")
         self.style.configure("TLabel", background="#3d3d3d", foreground="white")
-        self.style.configure("TButton", background="black", foreground="white")       
+        self.style.configure("TButton", background="white", foreground="black")       
         # get screen dimensions
         screen_width = self.winfo_screenwidth()
         screen_height = self.winfo_screenheight()
