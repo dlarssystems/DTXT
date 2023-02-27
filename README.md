@@ -5,4 +5,5 @@ Lightweight Text Editor  <br>
 HOW TO USE<br> 
 Right click to resize the window<br> 
 Middle click to drag the window<br> 
+https://github.com/dlarssystems/DTXT/archive/refs/heads/main.zip<br> 
 </p>
