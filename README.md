@@ -1,5 +1,5 @@
 # DTXT Lightweight Text Editor
-![image](https://user-images.githubusercontent.com/124361703/221480882-6b661a62-9955-49ca-adcc-ceae242b8ef2.png)<br> 
+![image](![image](https://user-images.githubusercontent.com/124361703/223003005-c396353d-196f-495f-a858-b66676365d42.png))<br> 
 <p align="center">
 Introducing DTXT, the sleek and versatile text editor designed for easy use and optimal productivity. <br>
 With its minimalist interface and intuitive controls, DTXT makes editing text files a breeze. <br><br>
