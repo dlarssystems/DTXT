@@ -34,7 +34,7 @@ class GUI(tk.Tk):
             self.header, text="SAVE", command=self.save_file)
         button2.pack(fill=tk.X, side=tk.LEFT, expand=True)
         button3 = ttk.Button(
-            self.header, text="VOZ", command=self.activate_voice_recognition)
+            self.header, text="VOICE", command=self.activate_voice_recognition)
         button3.pack(fill=tk.X, side=tk.LEFT, expand=True)
         self.bottom = ttk.Frame(self, style="TFrame", height=button_height)
         self.bottom.pack(side=tk.BOTTOM)
@@ -48,18 +48,16 @@ class GUI(tk.Tk):
     def activate_voice_recognition(self):
         r = sr.Recognizer()
         with sr.Microphone() as source:
-            print("Habla algo...")
+            print("Say something...")
             audio = r.listen(source)
         try:
-            text = r.recognize_google(audio, language='es-ES')
+            text = r.recognize_google(audio, language='en-US')
             print("Transcripción: " + text)
             self.text_editor.insert(tk.END, text + " ")
-        except sr.UnknownValueError:
-            print("No se pudo reconocer el audio")
-            self.content_label.config(text="No se pudo reconocer el audio")            
-        except sr.RequestError as e:
-            print("Error al solicitar resultados del servicio de reconocimiento de voz; {0}".format(e))
-            self.content_label.config(text="Error al solicitar resultados del servicio de reconocimiento de voz")
+        except sr.UnknownValueError:            
+            self.content_label.config(text="Audio could not be recognized")            
+        except sr.RequestError as e:            
+            self.content_label.config(text="Error requesting results from the speech recognition service")
     def open_file(self):
         filepath = filedialog.askopenfilename()
         if filepath:
